@@ -1,0 +1,11 @@
+﻿<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://10.0.2.4:8080/auth/realms/demo">
+    <SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="false"
+            protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol http://schemas.xmlsoap.org/ws/2003/07/secext">
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://10.0.2.4:8080/auth/realms/demo/broker/saml/endpoint"/>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress
+        </NameIDFormat>
+        <AssertionConsumerService
+                Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://10.0.2.4:8080/auth/realms/demo/broker/saml/endpoint"
+                index="1" isDefault="true" />
+    </SPSSODescriptor>
+</EntityDescriptor>
